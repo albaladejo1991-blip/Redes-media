@@ -1,0 +1,43 @@
+WEB DE ALEJANDRO ALBALADEJO · alejandroalbaladejo.es
+
+Esta carpeta es tu web completa, lista para subir.
+
+PASO 1 · SUBIR LA WEB A NETLIFY (5 min)
+ 1. Crea una cuenta gratis en https://www.netlify.com
+ 2. Entra en https://app.netlify.com/drop y arrastra ESTA CARPETA entera.
+ 3. Netlify te da una dirección provisional tipo  nombre-raro-123.netlify.app
+    Ábrela para comprobar que la web se ve bien. APÚNTALA: la necesitas en el paso 3.
+ 4. Pulsa "Claim site" / "Reclamar sitio" para que quede guardada en tu cuenta.
+
+PASO 2 · AÑADIR TU DOMINIO EN NETLIFY (2 min)
+ 1. En tu sitio de Netlify: Domain management > Add a domain.
+ 2. Escribe: alejandroalbaladejo.es  y confirma que es tuyo.
+ 3. Netlify te ofrecerá usar "Netlify DNS": elige la opción de configurar
+    DNS EXTERNO (lo haces en IONOS, paso 3).
+
+PASO 3 · CAMBIAR LOS DNS EN IONOS (10 min)
+ 1. Entra en https://my.ionos.es > Dominios y SSL > alejandroalbaladejo.es > DNS.
+ 2. Registro del dominio principal (nombre de host "@"):
+      Tipo A   ·  Host @    ·  Apunta a  75.2.60.5
+    Si ya existe un registro A con @, edítalo y pon esa IP.
+    Si existe un registro AAAA con @, BÓRRALO (si no, puede chocar).
+ 3. Registro del www:
+      Tipo CNAME  ·  Host www  ·  Apunta a  la dirección .netlify.app del paso 1
+    Si ya hay un registro A o CNAME con www, edítalo o bórralo y crea este.
+ 4. NO toques los registros MX ni TXT (son del correo).
+ 5. Guarda. Los cambios tardan de minutos a 24 horas.
+
+PASO 4 · COMPROBAR (2 min)
+ - En Netlify > Domain management debe aparecer el dominio verificado.
+ - El candado HTTPS se activa solo cuando los DNS ya apuntan bien.
+ - Abre https://alejandroalbaladejo.es en el móvil.
+ - Envíate el enlace por WhatsApp: debe salir tu foto con "Webs que traen clientes".
+
+Archivos de esta carpeta:
+ - index.html ......................... la web
+ - og-image.jpg ....................... imagen al compartir el enlace
+ - favicon.png, apple-touch-icon.png .. iconos
+ - sitemap.xml, robots.txt ............ para Google (envía sitemap.xml en Search Console)
+ - _redirects ......................... manda www.alejandroalbaladejo.es al dominio principal
+
+Para actualizar la web más adelante: en Netlify > Deploys, arrastra la carpeta nueva.
